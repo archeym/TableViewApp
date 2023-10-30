@@ -10,30 +10,40 @@ import UIKit
 class TrackTableViewController: UITableViewController {
     
     var songs = Song.createSong()
-    
-//    var cover = [
-//        "Carly Rae Japsen - Dedicated",
-//        "Dj Khaled - father of",
-//        "Injury Reserve - Jailbrake",
-//        "Jonas Brothers - Happiness Begins ",
-//        "Joyner Lucas - adhd",
-//        "Maluma - 11-11",
-//        "Never Young - LOSER",
-//        "Rammstein - rammstein",
-//        "Skepta - Ignorance Is Bliss",
-//        "Skillet - Victory",
-//        "Tylor the Creator - IGOR",
-//        "YG - Stop Snitching",
-//    ]
+
+    override func loadView() {
+        super.loadView()
+        print("func: \(#function), line: \(#line)")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("func: \(#function), line: \(#line)")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("func: \(#function), line: \(#line)")
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        print("func: \(#function), line: \(#line)")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("func: \(#function), line: \(#line)")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("func: \(#function), line: \(#line)")
     }
 
     // MARK: - Table view data source

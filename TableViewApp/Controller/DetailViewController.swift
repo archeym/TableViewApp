@@ -23,6 +23,10 @@ class DetailViewController: UIViewController {
         }
     }
     
+    deinit {
+        print("func: \(#function), line: \(#line)")
+    }
+    
 
     /*
     // MARK: - Navigation
